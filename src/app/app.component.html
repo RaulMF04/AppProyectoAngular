@@ -1,0 +1,29 @@
+<app-cabecero 
+  [presupuestoTotal]="getPresupuestoTotal()"
+  [ingresoTotal]="getIngresosTotal()"
+  [egresoTotal]="getEgresoTotal()"
+  [porcentajeTotal]="getPorcentajeTotal()">
+
+</app-cabecero>
+
+
+<app-formulario></app-formulario>
+
+
+  
+  <div class="contenedor limpiarEstilos">
+      
+      <app-ingreso>
+        
+      </app-ingreso>
+
+      <app-egreso
+      [ingresoTotal]="getIngresosTotal()"
+      ></app-egreso>              
+              
+ </div>
+ 
+ <footer style="text-align:center; font-size:18px; color:rgb(105, 101, 101);">
+  <p>Presupuestos Raul morales</p>
+  <p>© 2024</p>
+</footer>

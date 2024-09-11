@@ -1,0 +1,41 @@
+<form>
+  <div class="agregar">
+    <div class="agregar_contenedor">
+      <select (change)="tipoOperacion($event)" class="agregar_tipo">
+        <option value="ingresoOperacion" selected>+</option>
+        <option value="egresoOperacion">-</option>
+        <option value="multiplicarOperacion">*</option>
+        <option value="dividirOperacion">/</option>
+
+      </select>
+      <input [ngClass]="{ redfocus: tipo === 'egresoOperacion' }"
+             type="text" 
+             class="agregar_descripcion" 
+             placeholder="Agregar Descripción"
+             name="descripcionInput"
+             [(ngModel)]="descripcionInput" required>
+      <input [ngClass]="{ redfocus: tipo === 'egresoOperacion' }"
+             type="number" 
+             class="agregar_valor" 
+             placeholder="Valor"
+             name="valorInput"
+             [(ngModel)]="valorInput" required>
+      
+      <button (click)="agregarValor()" class="agregar_btn">
+        <i [ngClass]="{ red: tipo === 'egresoOperacion' }"
+           class="ion-ios-checkmark-outline"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mostrar el presupuesto multiplicado cuando la operación seleccionada sea "multiplicar" -->
+  <div *ngIf="tipo === 'multiplicarOperacion'">
+    <p><strong>Presupuesto Total Multiplicado:</strong> {{ presupuestoMultiplicado }}</p>
+  </div>
+
+
+   <!-- Mostrar el presupuesto dividido cuando la operación seleccionada sea "dividir" -->
+   <div *ngIf="tipo === 'dividirOperacion'">
+    <p><strong>Presupuesto Total Dividido:</strong> {{ presupuestoDividido }}</p>
+  </div>
+</form>
