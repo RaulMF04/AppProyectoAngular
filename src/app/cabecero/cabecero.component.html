@@ -11,23 +11,43 @@
     <div class="presupuesto_ingreso limpiarEstilos">
       <div class="presupuesto_ingreso--texto">Ingresos</div>
       <div class="right">
+        <ul>
+          <li *ngFor="let ingreso of ingresos">
+            {{ ingreso | currency:'USD':'$':'1.2-2' }}
+          </li>
+        </ul>
         <div class="presupuesto_ingreso--valor">
-          {{ ingresoTotal | currency:'USD':'$':'1.2-2' }}
+          Total: {{ ingresoTotal | currency:'USD':'$':'1.2-2' }}
         </div>
-        <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
       </div>
     </div>
     
     <div class="presupuesto_egreso limpiarEstilos">
       <div class="presupuesto_egreso--text">Egresos</div>
       <div class="right limpiarEstilos">
+        <ul>
+          <li *ngFor="let egreso of egresos">
+            - {{ egreso | currency:'USD':'$':'1.2-2' }}
+          </li>
+        </ul>
         <div class="presupuesto_egreso--valor">
-          - {{ egresoTotal | currency:'USD':'$':'1.2-2' }}
+          Total: - {{ egresoTotal | currency:'USD':'$':'1.2-2' }}
         </div>
         <div class="presupuesto_egreso--porcentaje">
           {{ porcentajeTotal | percent }}
         </div>
       </div>
+    </div>
+
+    <div [ngStyle]="{'color': strue? 'green':'red'}">
+
+
+    </div>
+    
+    <!-- Botones para guardar y verificar los datos -->
+    <div class="guardar-datos">
+      <button (click)="guardarPresupuestos()">Guardar</button>
+      <button (click)="checkStoredData()">Verificar Datos</button>
     </div>
   </div>
 </div>

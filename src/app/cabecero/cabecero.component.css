@@ -1,0 +1,26 @@
+.guardar-datos {
+    margin-top: 20px; /* Espaciado superior */
+    text-align: center; /* Centrar el botón */
+  }
+  
+  .guardar-datos button {
+    background-color: #6c757d; /* Color de fondo gris */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat Bold */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s ease; /* Transición suave en el color de fondo */
+  }
+  
+  .guardar-datos button:hover {
+    background-color: #5a6268; /* Color de fondo gris más oscuro en hover */
+  }
+  
+  .guardar-datos button:focus {
+    outline: none; /* Eliminar el borde de enfoque predeterminado */
+  }
+  

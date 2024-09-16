@@ -1,0 +1,130 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    /* Asegura que el body ocupe el 100% del viewport */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #6D6E71;
+    /* Fondo gris oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ocupa al menos el 100% de la ventana */
+    color: black;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ocupa al menos el 100% de la ventana */
+    background-color: #e0e7ed;
+    /* Fondo gris claro */
+    width: 100%;
+    /* Ocupa todo el ancho */
+}
+
+.login-box {
+    background-color: #ffffff;
+    /* Fondo blanco */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Contenedor para el logo */
+.logo-container {
+    margin-bottom: 5px;
+    /* Espacio entre el logo y el título */
+    text-align: center;
+}
+
+.logo {
+    width: 250px;
+    /* Ajusta el tamaño del logo aquí */
+    height: auto;
+}
+
+h2 {
+    color: #001E54;
+    /* Azul oscuro */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0842A7;
+}
+
+.input-group input {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f5f7fa;
+    /* Gris suave */
+    color: #333;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0995E6;
+    /* Azul claro */
+    box-shadow: 0 0 5px rgba(0, 116, 183, 0.3);
+}
+
+.login-btn {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 12px;
+    background-color: #0842A7;
+    /* Azul claro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #062a6e;
+    /* Azul más oscuro */
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-password a {
+    color: #0995E6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}

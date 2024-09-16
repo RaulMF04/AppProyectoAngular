@@ -11,83 +11,115 @@
 }
 
 body {
-    color: #555;
-    font-family: Open Sans;
+    color: #010101;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     position: relative;
-    height: 100vh;
-    font-weight: 400;
+    height: 150vh;
+
+
 }
 
-.right { float: right; }
-.red { color: #FF5049 !important; }
-.redfocus:focus { border: 1px solid #FF5049 !important; }
+.right {
+    float: right;
+}
+
+.red {
+    color: #FF5049 !important;
+}
+
+.redfocus:focus {
+    border: 1px solid #FF5049 !important;
+}
 
 .cabecero {
-    height: 40vh;
+    height: initial;
     background-size: cover;
     background-position: center;
     position: relative;
     width: 100%;
-    padding-top: 150px;
-    padding-bottom: 100px;
-    color: #fff;
-    background: url(assets/bg-pattern.png), #7b4397;
-    background: url(assets/bg-pattern.png), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
-    background: url(assets/bg-pattern.png), linear-gradient(to left, #7b4397, #dc2430)
+    padding: 130px;
+    color: #ffffff;
+    background: linear-gradient(to left,#0842A7, #6D6E71, #6D6E71,#001E54);
+
+}
+
+.logo {
+    position: absolute;
+    top: 100px;
+    left: 550px;
+    width: 430px;
+    height: max-content;
 }
 
 .presupuesto {
     position: absolute;
-    width: 350px;
+    width: 500px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
+
+
 }
 
-.presupuesto_titulo{
-    font-size: 18px;
+.presupuesto_titulo {
+    font-size: 32px;
     text-align: center;
     margin-bottom: 10px;
-    font-weight: 300;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
+
 .presupuesto_valor {
-    font-weight: 300;
     font-size: 46px;
     text-align: center;
     margin-bottom: 25px;
     letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .presupuesto_ingreso,
 .presupuesto_egreso {
     padding: 12px;
+    width: 500px;
     text-transform: uppercase;
+    font-weight: Medium;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .presupuesto_ingreso {
-    margin-bottom: 10px;
-    background-color: #28B9B5;
+    margin-bottom: 12px;
+    background-color: #0995E6;
+    font-weight: Medium;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .presupuesto_egreso {
-    background-color: #FF5049;
+    background-color: #001E54;
+    font-weight: Medium;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .presupuesto_ingreso--texto,
 .presupuesto_egreso--text {
     float: left;
     font-size: 13px;
-    color: #444;
+    color: #e7e7e7;
     margin-top: 2px;
+    font-weight: Medium;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .presupuesto_ingreso--valor,
 .presupuesto_egreso--valor {
     letter-spacing: 1px;
     float: left;
+    font-weight: Medium;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .presupuesto_ingreso--porcentaje,
@@ -97,14 +129,17 @@ body {
     font-size: 11px;
     padding: 3px 0;
     margin-left: 10px;
+    font-weight: Medium;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .presupuesto_egreso--porcentaje {
     background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
     border-radius: 3px;
+    font-weight: Medium;
+    font-family: 'Montserrat', sans-serif;
 }
-
 
 .agregar {
     padding: 14px;
@@ -134,7 +169,7 @@ body {
     border: 1px solid #e7e7e7;
     background-color: #fff;
     color: inherit;
-    font-family: inherit;
+    font-family: 'Montserrat', 'SemiBold Italic';
     font-size: 14px;
     padding: 12px 15px;
     margin-right: 10px;
@@ -142,8 +177,15 @@ body {
     transition: border 0.3s;
 }
 
-.agregar_descripcion { width: 400px;}
-.agregar_valor { width: 100px;}
+.agregar_descripcion {
+    width: 400px;
+
+}
+
+.agregar_valor {
+    width: 150px;
+
+}
 
 .agregar_btn {
     font-size: 35px;
@@ -157,7 +199,9 @@ body {
     margin-left: 10px;
 }
 
-.agregar_btn:active { transform: translateY(2px); }
+.agregar_btn:active {
+    transform: translateY(2px);
+}
 
 .agregar_tipo:focus,
 .agregar_descripcion:focus,
@@ -166,7 +210,9 @@ body {
     border: 1px solid #28B9B5;
 }
 
-.agregar_btn:focus { outline: none; }
+.agregar_btn:focus {
+    outline: none;
+}
 
 .contenedor {
     width: 1000px;
@@ -177,30 +223,43 @@ body {
     float: left;
     width: 475px;
     margin-right: 50px;
+    font-family: 'Montserrat', 'SemiBold Italic';
 }
 
 .egreso {
     float: left;
     width: 475px;
+    font-family: 'Montserrat', 'SemiBold Italic';
 }
 
 h2 {
     text-transform: uppercase;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: Medium;
     margin-bottom: 15px;
+    font-family: 'Montserrat', 'SemiBold Italic';
 }
 
-.ingreso_titulo { color: #28B9B5; }
-.egreso_titulo { color: #FF5049; }
+.ingreso_titulo {
+    color: #0995E6;
+}
+
+.egreso_titulo {
+    color: #001E54;
+}
 
 .elemento {
     padding: 13px;
     border-bottom: 1px solid #e7e7e7;
 }
 
-.elemento:first-child { border-top: 1px solid #e7e7e7; }
-.elemento:nth-child(even) { background-color: #f7f7f7; }
+.elemento:first-child {
+    border-top: 1px solid #e7e7e7;
+}
+
+.elemento:nth-child(even) {
+    background-color: #f7f7f7;
+}
 
 .elemento_descripcion {
     float: left;
@@ -225,15 +284,14 @@ h2 {
 
 .ingreso .elemento_valor,
 .ingreso .elemento_eliminar--btn {
-    color: #28B9B5;
+    color: #0995E6;
 }
 
 .egreso .elemento_valor,
 .egreso .elemento_porcentaje,
 .egreso .elemento_eliminar--btn {
-    color: #FF5049;
+    color: #001E54;
 }
-
 
 .elemento_eliminar {
     float: left;
@@ -250,20 +308,33 @@ h2 {
     display: none;
 }
 
-.elemento_eliminar--btn:focus { outline: none; }
-.elemento_eliminar--btn:active { transform: translateY(2px); }
+.elemento_eliminar--btn:focus {
+    outline: none;
+}
 
-.elemento:hover .elemento_eliminar--btn { display: block; }
-.elemento:hover .elemento_valor { transform: translateX(-20px); }
-.elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
+.elemento_eliminar--btn:active {
+    transform: translateY(2px);
+}
 
+.elemento:hover .elemento_eliminar--btn {
+    display: block;
+}
+
+.elemento:hover .elemento_valor,
+.elemento:hover .elemento_porcentaje {
+    transform: translateX(-20px);
+}
 
 .no_pagado {
     background-color: #FFDAD9 !important;
     cursor: pointer;
     color: #FF5049;
-
 }
 
-.no_pagado .elemento_porcentaje { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
-.no_pagado:hover .elemento_descripcion { font-weight: 900; }
+.no_pagado .elemento_porcentaje {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.no_pagado:hover .elemento_descripcion {
+    font-weight: 900;
+}

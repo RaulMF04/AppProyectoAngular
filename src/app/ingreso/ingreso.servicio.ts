@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import { Ingreso } from "./ingreso.model";
 
 export class IngresoServicio {
@@ -8,9 +9,30 @@ export class IngresoServicio {
 
     
     eliminar(ingreso: Ingreso) {
-        const indice = this.ingresos.indexOf(ingreso);
-        this.ingresos.splice(indice, 1);
-    }
+        Swal.fire({
+          title: '¿Estás seguro?',
+          text: 'No podrás revertir esta acción!',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Sí, eliminar!',
+          cancelButtonText: 'Cancelar'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            const indice = this.ingresos.indexOf(ingreso);
+            if (indice !== -1) {
+              this.ingresos.splice(indice, 1);
+              Swal.fire(
+                'Eliminado!',
+                'El ingreso ha sido eliminado.',
+                'success'
+              );
+            }
+          }
+        });
+      }
+      
 
     // Método para obtener el total de ingresos
     obtenerIngresoTotal(): number {

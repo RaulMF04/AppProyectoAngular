@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppComponent } from './app.component';
 import { CabeceroComponent } from './cabecero/cabecero.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
@@ -11,6 +12,7 @@ import { EgresoServicio } from './egreso/egreso.servicio';
 import { FormsModule } from '@angular/forms';
 import { MultiplicacionPresupuestoComponent } from './multiplicacion-presupuesto/multiplicacion-presupuesto.component';
 import { DivisionPresupuestoComponent } from './division-presupuesto/division-presupuesto.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import { DivisionPresupuestoComponent } from './division-presupuesto/division-pr
     EgresoComponent,
     FormularioComponent,
     MultiplicacionPresupuestoComponent,
-    DivisionPresupuestoComponent
+    DivisionPresupuestoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
+
   ],
-  providers: [IngresoServicio, 
-              EgresoServicio],
+  providers: [IngresoServicio,
+    EgresoServicio],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
